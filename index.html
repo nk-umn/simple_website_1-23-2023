@@ -2,23 +2,43 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Author Info</title>
+    <title>OpenWRT</title>
+    <script async defer src="resources/js/js_functions.js"></script>
+    <link rel="stylesheet" href="resources/css/index.css">
   </head>
   <body>
-    <h1>Author Info:</h1>
-    <ul>
-        <li>
-            Author 1
-        </li>
-        <li>
-            Author 2
-        </li>
-        <li>
-            Author 3
-        </li>
-        <li>
-            Author 4
-        </li>
-    </ul>
+    <div class="outer">
+        <div class="center">
+            <div class="div1">
+                <img class="fullsize-img" id="img-container" src="resources/images/openwrt.png" alt="openwrt-logo">
+            </div>
+            <div class="div2">
+                <h1>Info</h1>
+                <p>
+                    <a href="https://forum.openwrt.org/" target="_blank">OpenWRT Forums</a>
+                </p>
+            </div>
+            <div class="div3">
+                <p>
+                    OpenWRT is an open source router firmware project made to both increase 
+                    a user's privacy and control over his or her device and extend the life of older router hardware.
+                    For some reason, I am very interested in routers and networking in general, so OpenWRT (being that it is
+                    now the main open source router firmware after the late and great DD-WRT) is something I find very cool.
+                </p>
+                <!-- <button type="button" onclick="changeSize()">Toggle Image Size</button> -->
+            </div>
+            <div class="div4">
+                <h1>Guest Book</h1>
+                <form id="guest_form" onsubmit="addGuest(); return false" >
+                    <label for="fname" id="guest_name_label">Guest Name</label>
+                    <input type="text" id="fname" name="fname">
+                    <input type="submit" value="Add Guest">
+                </form>
+                <br>
+                <p>Guests Attending</p>
+                <div id="add_guest"></div>
+            </div>
+        </div>
+    </div>
   </body>
 </html>
